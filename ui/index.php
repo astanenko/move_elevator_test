@@ -16,6 +16,10 @@ $availableLanguages = array(
  );
     
 try {
+    if (!file_exists('twitter.phar')) {
+        throw new Exception("File twitter.phar has not been found. Please, plae it in the same directory as index.php");
+    }
+    
     require_once "phar://tweeter.phar/index.php";
     /* @var $tweets array */
 } catch (Exception $ex) {
