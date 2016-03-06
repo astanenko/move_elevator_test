@@ -16,11 +16,11 @@ $availableLanguages = array(
  );
     
 try {
-    if (!file_exists('twitter.phar')) {
-        throw new Exception("File twitter.phar has not been found. Please, plae it in the same directory as index.php");
+    if (!file_exists('tweeter.phar')) {
+        throw new Exception("File tweeter.phar has not been found. Please, place it in the same directory as index.php");
     }
     
-    require_once "phar://tweeter.phar/index.php";
+    require_once "phar://twitter.phar/index.php";
     /* @var $tweets array */
 } catch (Exception $ex) {
     $error = $ex->getMessage();
