@@ -1,8 +1,6 @@
-# move_elevator_test
+# Tweets loader version 1.0
 
-This is Tweets loader version 1.0
-
-h2. Usage
+Usage
 
 * To call it from command line, use php twitter.phar hashtag_to_search number_of_tweets language
 * Hashtag and number of tweets are mandatory, language parameter can be skipped
