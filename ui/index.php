@@ -2,7 +2,7 @@
 /**
  * GUI for twitter loader
  * 
- * @package tweeter_loader
+ * @package twitter_loader
  * 
  * @author Oleksandr Zhdanenko
  * @email ozhdanenko@gmail.com
@@ -16,8 +16,8 @@ $availableLanguages = array(
  );
     
 try {
-    if (!file_exists('tweeter.phar')) {
-        throw new Exception("File tweeter.phar has not been found. Please, place it in the same directory as index.php");
+    if (!file_exists('twitter.phar')) {
+        throw new Exception("File twitter.phar has not been found. Please, place it in the same directory as index.php");
     }
     
     require_once "phar://twitter.phar/index.php";
@@ -53,7 +53,7 @@ try {
             <div class="row-fluid">
                 <div class="span12">
                     <div class="hero-unit">
-                        <h1>Tweets loader v 1.0</h1>
+                        <h1>Twitter loader v 1.0</h1>
                     </div>
                 </div>
             </div>

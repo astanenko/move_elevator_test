@@ -2,15 +2,14 @@
 /**
  * Initializes execution of twitter loader.
  * 
- * @package tweeter_loader
+ * @package twitter_loader
  * 
  * @author Oleksandr Zhdanenko
  * @email ozhdanenko@gmail.com
  */
-//require_once "phar://twitter.phar/Application.php";
-require_once "phar://tweeter.phar/Application.php";
+require_once "phar://twitter.phar/Application.php";
 
-$configFile = "phar://tweeter.phar/config.ini";
+$configFile = "phar://twitter.phar/config.ini";
 
 try {
     

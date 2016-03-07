@@ -2,12 +2,12 @@
 /**
  * Holds ApplicationTest class
  * 
- * @package tweeter_loader
+ * @package twitter_loader
  * 
  * @author Oleksandr Zhdanenko
  * @email ozhdanenko@gmail.com
  */
-require_once "Application.php";
+require_once "phar://twitter.phar/Application.php";
 
 
 /**

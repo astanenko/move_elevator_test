@@ -2,12 +2,12 @@
 /**
  * Holds Application class
  * 
- * @package tweeter_loader
+ * @package twitter_loader
  * 
  * @author Oleksandr Zhdanenko
  * @email ozhdanenko@gmail.com
  */
-require "phar://tweeter.phar/vendor/autoload.php";
+require "phar://twitter.phar/vendor/autoload.php";
 
 use Abraham\TwitterOAuth\TwitterOAuth;
 
@@ -100,10 +100,10 @@ class Application {
         if (count($arguments) == 1 || (count($arguments) == 2 && $arguments[1] == '-help')) {
             $outputArray = [
                 "",
-                "Tweets loader. Version 1.0",
+                "Twitter loader. Version 1.0",
                 "",
                 "Usage:",
-                "tweet.phar [hashtag] [number of tweets] [language]",
+                "twitter.phar [hashtag] [number of tweets] [language]",
                 "",
                 " -hashtag                  Hashtag to search. String. *Mandatory",
                 " -number of tweets         Number of search results to show. Integer. *Mandatory",
@@ -215,12 +215,12 @@ class Application {
      * @return void 
      */
     private function connectToTwitter() {
-        //'phar://tweeter.phar/vendor/abraham/twitteroauth/src/cacert.pem'
+        // Certificate file should be copied to working directory, because CURL can't get access to contents of phar archive
         if (!file_exists('cacert.pem')) {
             if (!is_writable('./')) {
                 throw new Exception("You should have write permissions for working directory to execute this app");
             }
-            copy('phar://tweeter.phar/vendor/abraham/twitteroauth/src/cacert.pem','cacert.pem');
+            copy('phar://twitter.phar/vendor/abraham/twitteroauth/src/cacert.pem','cacert.pem');
         }
         $this->connection = new TwitterOAuth($this->consumerKey, $this->consumerSecret);
         $success = $this->connection->get("account/verify_credentials");
