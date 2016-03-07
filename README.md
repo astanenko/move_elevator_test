@@ -1,4 +1,4 @@
-# Tweets loader version 1.0
+# Twitter loader version 1.0
 
 Usage
 
