@@ -1,6 +1,8 @@
 # Twitter loader version 1.0
 
-Usage
+Is a test task for one of the interviews
+
+## Usage
 
 * To call it from command line, use php twitter.phar hashtag_to_search number_of_tweets language
 * Hashtag and number of tweets are mandatory, language parameter can be skipped
